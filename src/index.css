@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-800 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl mb-6;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl mb-4;
+  }
+  
+  p {
+    @apply text-gray-600 leading-relaxed;
+  }
+  
+  .container {
+    @apply px-4 md:px-6 lg:px-8 mx-auto;
+    max-width: 1280px;
+  }
+  
+  section {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-600;
+  }
+  
+  /* Animation for the wave emoji */
+  .wave {
+    animation: wave 2.5s ease-in-out infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wave {
+    0% { transform: rotate(0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate(0.0deg) }
+    100% { transform: rotate(0.0deg) }
+  }
+}
+
+@layer components {
+  /* Custom styles for the timeline in Education component */
+  .timeline-item:nth-child(odd) {
+    @apply md:pr-8 md:text-right;
+  }
+  
+  .timeline-item:nth-child(even) {
+    @apply md:pl-8 md:text-left;
+  }
+  
+  /* Custom styles for project cards */
+  .project-card {
+    @apply transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  /* Custom styles for the contact form */
+  .form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors flex items-center justify-center;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-2 px-6 rounded-lg transition-colors flex items-center justify-center;
+  }
+}
