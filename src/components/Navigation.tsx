@@ -32,7 +32,7 @@ const Navigation: React.FC = () => {
         isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
       }`}
     >
-      <div className="w-full max-w-full mx-auto px-6">
+      <div className="w-full max-w-full mx-auto px-6 md:px-14 lg:px-24">
         
         <div className="flex justify-between items-center">
 
@@ -47,8 +47,8 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:block">
-            <ul className="flex space-x-14">
+          <nav className="hidden lg:block">
+            <ul className="flex space-x-10 ">
               {navLinks.map((link) => (
                 <li key={link.to}>
                   <Link
@@ -58,7 +58,7 @@ const Navigation: React.FC = () => {
                     className={`cursor-pointer text-lg font-medium transition-colors ${
                       isScrolled
                         ? 'text-gray-700 hover:text-blue-600'
-                        : 'text-white hover:text-blue-200'
+                        : 'text-gray-800 hover:text-blue-600'
                     }`}
                     activeClass="text-blue-600 font-semibold"
                     spy={true}
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden text-gray-700 focus:outline-none"
+            className=" lg:hidden text-gray-800 focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -84,7 +84,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4">
+          <nav className=" mt-4 pb-4 bg-gradient-to-b from-blue-50 to-white">
             <ul className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <li key={link.to}>

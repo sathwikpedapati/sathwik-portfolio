@@ -1,9 +1,8 @@
 import React from 'react';
-import profilePlaceholder from '../assets/profile-placeholder.jpg';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white md:px-10 lg:px-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
         
@@ -13,7 +12,7 @@ const About: React.FC = () => {
             <div className="max-w-md mx-auto">
               <div className="w-80 h-80 mx-auto md:mx-0 rounded-[50%] border-4 border-blue-100 overflow-hidden">
                 <img 
-                  src={profilePlaceholder} 
+                  src="/ram.jpg"
                   alt="Sathwik Pedapati" 
                   className="w-full h-full object-cover"
                 />

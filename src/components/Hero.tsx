@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white md:px-10 lg:px-20"
     >
       <div className="container mx-auto px-4 py-16 md:py-24">
         

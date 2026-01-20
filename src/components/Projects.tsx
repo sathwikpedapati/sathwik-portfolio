@@ -1,19 +1,13 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-import agri from "../assets/agri.svg";
-import address from "../assets/address.svg";
-import recipe from "../assets/recipe.svg";
-import news from "../assets/news.svg";
-import money from "../assets/money.svg";
-import talk from "../assets/talk.svg";
 
 const Projects: React.FC = () => {
   const projects = [
     {
       title: "TalkEasy — Real-Time Chat App",
       date: "2025",
-      image: talk,
+      image: "/chat.jpeg",
       description:
         "A real-time messaging platform with live chat, image sharing, authentication, and typing indicators.",
       features: [
@@ -30,7 +24,7 @@ const Projects: React.FC = () => {
     {
       title: "Quiz Hub — Full-Stack Quiz Web App",
       date: "2025",
-      image: "https://cdn-icons-png.flaticon.com/512/3940/3940056.png",
+      image:  "/quiz.jpeg",
       description:
         "A fun and interactive quiz application that lets users test their knowledge with a smooth, playful experience.",
       features: [
@@ -46,7 +40,7 @@ const Projects: React.FC = () => {
     {
       title: "MoneyTrack — Expense Tracker",
       date: "2025",
-      image: money,
+      image:  "/money.jpeg",
       description:
         "A personal expense tracking system with budgeting tools and visual spending analytics.",
       features: [
@@ -62,7 +56,7 @@ const Projects: React.FC = () => {
     {
       title: "Recipe Box — Recipe Sharing Web App",
       date: "2025",
-      image: recipe,
+      image:  "/recipe.jpeg",
       description:
         "A recipe sharing platform where users can upload, explore, and manage cooking recipes.",
       features: [
@@ -78,7 +72,7 @@ const Projects: React.FC = () => {
     {
       title: "AgriConnect — Agriculture Marketplace",
       date: "2025",
-      image: agri,
+      image:  "/agri.jpg",
       description:
         "A multilingual agricultural marketplace connecting farmers, buyers, and admins in real time.",
       features: [
@@ -94,7 +88,7 @@ const Projects: React.FC = () => {
     {
       title: "Address Book — Address Management System",
       date: "2025",
-      image: address,
+      image: "/address.jpeg",
       description:
         "A full-stack address storing application with authentication and CRUD operations.",
       features: [
@@ -110,7 +104,7 @@ const Projects: React.FC = () => {
     {
       title: "NewsToday — Live News Platform",
       date: "2025",
-      image: news,
+      image:  "/news.jpeg",
       description:
         "A real-time news aggregation platform with categories, themes, and user profiles.",
       features: [
@@ -126,7 +120,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-50 px-6 md:px-10 lg:px-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">My Projects</h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -145,8 +139,8 @@ const Projects: React.FC = () => {
 
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
-                  <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                  <h3 className="text-base md:text-xl font-bold text-gray-800">{project.title}</h3>
+                  <span className="text-xs md:base text-gray-500 bg-gray-100 px-2 py-1 rounded">
                     {project.date}
                   </span>
                 </div>
