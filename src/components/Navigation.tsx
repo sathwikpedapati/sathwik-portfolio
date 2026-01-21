@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
             duration={500}
             className="text-2xl font-bold text-gray-800 cursor-pointer tracking-wide"
           >
-            {S}
+          sathwik.dev
           </Link>
 
           {/* Desktop Navigation */}
